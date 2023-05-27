@@ -73,6 +73,15 @@ ul {
 .nav-contact {
   color: #212121;
 }
+.nav-blue-underline {
+  position: relative;
+  top: 25.5px;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
 .nav-contact {
   margin-right: 364px;
 }
@@ -210,6 +219,63 @@ ul {
 }
 .gallery {
   margin-right: 30px;
+}
+.img-text-box-1 {
+  background-color: #2f303acc;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  top: -86px;
+}
+.text-box-1 {
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0;
+}
+.img-text-box-2 {
+  background-color: #2f303acc;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  top: -86px;
+}
+.text-box-2 {
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0;
+}
+.img-text-box-3 {
+  background-color: #2f303acc;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  top: -86px;
+}
+.text-box-3 {
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0;
 }
 .gallery:nth-child(3) {
   margin-right: 0;
@@ -420,6 +486,14 @@ img {
 /* 
 VVV PORTFOLIO SECTION VVV
 */
+.p-nav-blue-underline {
+  position: relative;
+  top: 25.5px;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
 .p-buttons {
   display: flex;
   justify-content: center;
@@ -455,12 +529,43 @@ VVV PORTFOLIO SECTION VVV
 .p-project {
   max-height: 404px;
   margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
+
 .p-project:hover,
 .p-project:focus {
   box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
     0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
+.p-project-img {
+  overflow: hidden;
+}
+.p-project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  background-color: #2196f3e6;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+.p-project:hover .p-project-overlay,
+.p-project:focus .p-project-overlay {
+  transform: translateY(0);
+}
+.p-project-overlay p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 30px 24px;
+}
+
 .p-project:nth-last-child(-n + 3) {
   margin-bottom: 94px;
 }
