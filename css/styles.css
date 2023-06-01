@@ -120,6 +120,10 @@ ul {
   visibility: hidden;
   opacity: 0;
 }
+.is-hidden > .modal {
+  scale: 0;
+  transition: scale 600ms;
+}
 .backdrop {
   display: flex;
   background-color: rgba(0, 0, 0, 0.2);
@@ -128,6 +132,7 @@ ul {
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 1;
 }
 .modal {
   margin: auto;
@@ -136,16 +141,10 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   width: 528px;
   height: 581px;
-  animation: aniatemodal 1000ms;
+  scale: 1;
+  transition: scale 600ms;
 }
-@keyframes aniatemodal {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 .modal-close {
   border: none;
   width: 30px;
