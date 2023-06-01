@@ -119,11 +119,9 @@ ul {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+  transform: scale(0);
 }
-.is-hidden > .modal {
-  scale: 0;
-  transition: scale 600ms;
-}
+
 .backdrop {
   display: flex;
   background-color: rgba(0, 0, 0, 0.2);
@@ -133,16 +131,20 @@ ul {
   top: 0;
   bottom: 0;
   z-index: 1;
+  cursor: not-allowed;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
+  position: relative;
   margin: auto;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   width: 528px;
   height: 581px;
-  scale: 1;
-  transition: scale 600ms;
+  cursor: auto;
 }
 
 .modal-close {
